@@ -3,7 +3,7 @@ export default class Team {
     this.members = new Set();
   }
 
-  compare(character) {
+  match(character) {
     for (const member of this.members) {
       if (JSON.stringify(member) === JSON.stringify(character)) {
         return true;
@@ -13,7 +13,7 @@ export default class Team {
   }
 
   add(character) {
-    if (this.compare(character)) {
+    if (this.match(character)) {
       throw new Error('Такой персонаж уже существует');
     }
 
@@ -21,7 +21,7 @@ export default class Team {
   }
 
   addAll(...characters) {
-    characters.forEach((char) => this.compare(char) || this.members.add(char));
+    characters.forEach((char) => this.match(char) || this.members.add(char));
   }
 
   toArray() {

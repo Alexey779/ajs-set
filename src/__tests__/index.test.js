@@ -1,11 +1,11 @@
 import Team from '../index';
 
 const character1 = {
-  name: 'aaa',
+  name: 'oleg',
   type: 'Bowman',
 };
 const character2 = {
-  name: 'aaa',
+  name: 'ivan',
   type: 'Swordsman',
 };
 
